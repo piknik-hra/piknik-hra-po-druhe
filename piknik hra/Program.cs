@@ -17,6 +17,7 @@ namespace piknik_hra
          */
         static List<string> lahky = new List<string>();
 
+
         static string lahkyKluc = String.Empty;
 
 
@@ -44,10 +45,15 @@ namespace piknik_hra
              * skoncit. 
              */
 
-            //asjkbkasj
-            //osdkfosdkfodkfo
+            lahky.Add("na");
+            lahky.Add("než");
+            lahky.Add("neha");
+            lahky.Add("anežka");
+            lahky.Add("žena");
 
-            
+            lahkyKluc = "n e a ž k a";
+
+
         }
 
         //funkcia na testovanie ci je input totozny s hladanym slovom
@@ -62,6 +68,21 @@ namespace piknik_hra
                 }
             }
             return aa;
+        }
+
+
+
+
+
+
+
+        //funkcia na volne riadky
+        static void volneRiadky(int a)
+        {
+            for (int i = 0; i < a; i++)
+            {
+                Console.WriteLine(" ");
+            }
         }
 
 
