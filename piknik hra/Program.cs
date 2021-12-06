@@ -45,6 +45,7 @@ namespace piknik_hra
              * skoncit. 
              */
 
+            //naplnenie listu
             lahky.Add("na");
             lahky.Add("než");
             lahky.Add("neha");
@@ -52,6 +53,52 @@ namespace piknik_hra
             lahky.Add("žena");
 
             lahkyKluc = "n e a ž k a";
+
+
+            //zacanie mainu
+            Console.WriteLine("zadaj svoje meno");
+            string pouzivatel = Console.ReadLine();
+
+            while (true)
+            {
+                Console.WriteLine("zadaj obtiaznost (L-lahka, S-stredna, T-tazka, K-koniec)");
+                string vyberPouzivatela = Console.ReadLine();
+
+                if (vyberPouzivatela == "L")
+                {
+                    int pocetZlych = 0;
+                    int pocetUhadnutych = 5;
+                    Console.WriteLine("skladaj podla tyhto slov: " + lahkyKluc);
+
+                    for (int i = 0; i < 5; i++)
+                    { 
+                        
+                        string input = Console.ReadLine();
+
+                        if (porovnanieInputS(input, lahky) == true)
+                        {
+                             pocetUhadnutych--;
+                             Console.WriteLine("zostavajuci pocet slov: " + pocetUhadnutych);
+                        }
+                        else 
+                        {
+                            Console.WriteLine("zadal si zle");
+                            pocetZlych++;
+
+                            if (pocetZlych > 2)
+                            {
+                                break;
+                            }
+                        }
+                        
+
+                    }
+                    
+
+                }
+            }
+
+
 
 
         }
